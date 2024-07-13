@@ -12,6 +12,7 @@ function home(){
         }
     )
     const content = document.querySelector("#content");
+    content.textContent = "";
     const imgMain = new Image();
     imgMain.src = ImgTables;
     content.appendChild(imgMain);
