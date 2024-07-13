@@ -1,0 +1,60 @@
+:root {
+    --background-color: #dae2d5;
+    --gutter: 16px;
+    --header-height: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: var(--header-height) auto;
+}
+
+header {
+    background-color: var(--background-color);
+}
+
+#content {
+    position: relative;
+    background-color: var(--background-color);
+}
+
+#content img {
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#home-text {
+    position: absolute;
+    bottom: 18%;
+    background: white;
+    opacity: 70%;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    padding: var(--gutter);
+    text-align: right;
+    display: grid;
+    justify-items: center;
+}
+
+#home-text > * {
+    width: min(70%, 700px);
+}
+
+
+/* Calculated on https://min-max-calculator.9elements.com/ */
+#home-text > h1 {
+    font-size: clamp(2rem, 1.455rem + 2.73vw, 3.5rem);
+}
+
+#home-text > p {
+    font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+}
