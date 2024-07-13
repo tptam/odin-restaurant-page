@@ -2,6 +2,15 @@ import ImgTables from './images/tables.jpg';
 import './style.css';
 
 function home(){
+    document.querySelectorAll("nav>button").forEach(
+        button => {
+            if (button.id === "home") {
+                button.classList.add("selected");
+            } else {
+                button.classList.remove("selected");
+            }
+        }
+    )
     const content = document.querySelector("#content");
     const imgMain = new Image();
     imgMain.src = ImgTables;
