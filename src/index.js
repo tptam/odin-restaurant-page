@@ -1,3 +1,4 @@
-import mainImage from './tables.jpg';
+import home from "./home.js"
 
-console.log("Welcome to Tam's");
+console.log("This is index.js");
+home();
