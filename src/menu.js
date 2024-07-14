@@ -143,6 +143,32 @@ const menuData = [
     }
 ];
 
+function createMenuCard(menuData) {
+    const menuCard = document.createElement("div#menu-card");
+    for (let section in menuData) {
+        const section = document.createElement("section");
+        const category = document.createElement("h2");
+        category.textContent = section.category;
+        section.appendChild(category);
+
+        const list = document.createElement("ul");
+
+        for (let item in section.items) {
+            const itemHtml = `
+                <li>
+                    <h3>${item.name}</h3>
+                    <p class="price">${item.price}</p>
+                    <p class="description">${item.description}</p>
+                </li>
+            `
+            list.appendChild(parseHtml(itemHtml));
+        }
+
+        section.appendChild(list);
+
+        return menuCard;
+    }
+}
 
 
 function menu(){
@@ -154,14 +180,7 @@ function menu(){
     imgMain.classList.add(".background");
     content.appendChild(imgMain);
 
-    const homeTextHtml = `
-            <div id="menu">
-                <h1>Menu</h1>
-            </div>
-    `;
-    const homeText = parseHtml(homeTextHtml);
-    content.appendChild(imgMain);
-    content.appendChild(homeText);
+    content.appendChild(createMenuCard(menuData));
 }
 
 export default menu;
