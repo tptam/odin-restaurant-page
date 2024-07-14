@@ -178,9 +178,7 @@ function createMenuCard(menuData) {
                     <p class="description">${item.description}</p>
                 </li>
             `
-            console.log(itemHtml);
             const itemElement = parseHtml(itemHtml);
-            console.log(itemElement);
             list.appendChild(parseHtml(itemHtml));
         }
 
