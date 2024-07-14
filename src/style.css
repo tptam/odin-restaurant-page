@@ -13,6 +13,7 @@
     --primary-color: #617d4f;    
     --primary-color-light: #bad4aa;
     --secondary-color-light: #aaacd4;
+    --secondary-color-xlight:#e7e8f3;
     --text-color-light: #32382e;
     --background-color: #dae2d5;
     --surface-color: white;
@@ -232,6 +233,28 @@ nav>button:hover {
     margin-top: calc(var(--gutter) * 2);
 }
 
+table#opening-hours {
+    margin: var(--gutter);
+    font-size: 1.4rem;
+    border-collapse: collapse;
+}
+
+.table-wrapper {
+    width: fit-content;
+    margin: calc(var(--gutter)*2) auto;
+    padding: var(--gutter);
+    border: 5px double var(--primary-color);
+}
+
+#opening-hours th,
+#opening-hours td {
+    padding: calc(var(--gutter)/2) calc(var(--gutter) * 2)
+}
+
+#opening-hours th {
+    border-right: 1px solid var(--primary-color);
+    text-align: left;
+}
 
 /* For smaller screens */
 @media screen and (max-width: 700px) {
@@ -277,5 +300,20 @@ nav>button:hover {
         border: none;
         border-radius: 1rem;
         background-color: var(--primary-color-light);
+    }
+
+    #contact-card {
+        width: 90%;
+        padding-right: calc(var(--gutter)*2);
+        padding-left: calc(var(--gutter)*2);
+    }
+
+    #opening-hour {
+        margin: 0;
+    }
+    
+    #opening-hours th,
+    #opening-hours td {
+        padding: calc(var(--gutter)/2) calc(var(--gutter) * 1);
     }
 }

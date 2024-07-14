@@ -16,6 +16,7 @@ function contact(){
             <h1>Contact Us</h1>
             <section>
                 <h2>Opening Hours</h2>
+                <div class="table-wrapper">
                 <table id="opening-hours">
                     <tr>
                         <th scope="row">Mon</th>
@@ -46,6 +47,7 @@ function contact(){
                         <td>Closed</td>
                     </tr>
                 </table>
+                </div>
             </section>
             <section>
                 <h2>Contact Info</h2>
