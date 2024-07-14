@@ -157,6 +157,9 @@ const menuData = [
 function createMenuCard(menuData) {
     const menuCard = document.createElement("div");
     menuCard.id = "menu-card";
+    const title = document.createElement("h1");
+    title.textContent = "Menu"
+    menuCard.appendChild(title);
     for (let sectionData of menuData) {
         const section = document.createElement("section");
         const category = document.createElement("h2");
@@ -170,7 +173,7 @@ function createMenuCard(menuData) {
                 <li>
                     <img src=${images[item.src]} alt="${item.name}">
                     <h3>${item.name}</h3>
-                    <p class="price">${item.price}</p>
+                    <p class="price">$${item.price}</p>
                     <p class="description">${item.description}</p>
                 </li>
             `

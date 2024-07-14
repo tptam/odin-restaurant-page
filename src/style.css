@@ -4,12 +4,14 @@
     --narrow-hero-height: 30vh;
 
     --main-content-width: min(80%, 700px);
+    --menu-photo-width: 150px;
 
     --tab-number: 3;
 
-    
+    --primary-color: #617d4f;    
     --primary-color-light: #bad4aa;
     --secondary-color-light: #aaacd4;
+    --text-color-light: #32382e;
     --background-color: #dae2d5;
     --surface-color: white;
     --light-blue: #b6cfd4;
@@ -27,12 +29,14 @@ ul {
     list-style: none;
 }
 
+/* Major sections */
 
 body {
     display: grid;
     width: 100vw;
     height: 100vh;
     grid-template-rows: var(--header-height) auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header {
@@ -121,4 +125,109 @@ nav>button:hover {
     opacity: 70%;
     margin: auto;
     margin-top: 15vh;
+    margin-bottom: 15vh;
+    padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3);
+}
+
+#menu-card section:not(:first-of-type){
+    margin-top: calc(var(--gutter) * 4);
+}
+
+#menu-card h1 {
+    margin-bottom: calc(var(--gutter) * 3);
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+#menu-card h2 {
+    margin: var(--gutter) 0;
+    font-size: 2rem;
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+#menu-card h3 {
+    font-size: 1.4rem;
+}
+
+#menu-card ul {
+    display: grid;
+    gap: calc(var(--gutter) * 3);
+}
+
+#menu-card li {
+    display: grid;
+    column-gap: var(--gutter);
+    align-items: center;
+    
+    grid-template: repeat(2, 1fr) / var(--menu-photo-width) 1fr 3rem;
+    grid-template-areas: 
+        "image name price"
+        "image description description"
+    ;
+}
+
+#menu-card li img {
+    grid-area: image;
+}
+
+#menu-card li h3 {
+    grid-area: name;
+}
+
+#menu-card li .price {
+    grid-area: price;
+    font-size: 1.6rem;
+}
+
+#menu-card li .description {
+    grid-area: description;
+    align-self: start;
+    font-size: 1.2rem;
+    color: var(--text-color-light);
+}
+
+@media screen and (max-width: 700px) {
+    #menu-card h2 {
+        text-align: center;
+    }
+    #menu-card li {
+        grid-template: 150px 1fr 1fr / 1fr 3rem;
+        grid-template-areas: 
+            "image image"
+            "name price"
+            "description description"
+        ;
+    }   
+    #menu-card img {
+        justify-self: center;
+        padding-bottom: var(--gutter);
+    }
+    #menu-card h2 {
+        margin-bottom: calc(var(--gutter)*3);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #menu-card {
+        width: 90%;
+        padding-right: calc(var(--gutter)*2);
+        padding-left: calc(var(--gutter)*2);
+    }
+    #menu-card li {
+        grid-template-rows: 150px 1fr 1fr auto;
+        grid-template-columns:none;
+        grid-template-areas: 
+            "image"
+            "name"
+            "price"
+            "description"
+        ;
+    }
+    
+    #menu-card h2 {
+        text-align: center;
+        border: none;
+        border-radius: 1rem;
+        background-color: var(--primary-color-light);
+    }
 }
