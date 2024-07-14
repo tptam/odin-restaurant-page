@@ -8,7 +8,7 @@ function home(){
 
     const imgMain = new Image();
     imgMain.src = ImgTables;
-    imgMain.classList.add(".background");
+    imgMain.classList.add("background");
     content.appendChild(imgMain);
 
     const homeTextHtml = `

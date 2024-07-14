@@ -144,16 +144,17 @@ const menuData = [
 ];
 
 function createMenuCard(menuData) {
-    const menuCard = document.createElement("div#menu-card");
-    for (let section in menuData) {
+    const menuCard = document.createElement("div");
+    menuCard.id = "menu-card";
+    for (let sectionData of menuData) {
         const section = document.createElement("section");
         const category = document.createElement("h2");
-        category.textContent = section.category;
+        category.textContent = sectionData.category;
         section.appendChild(category);
 
         const list = document.createElement("ul");
 
-        for (let item in section.items) {
+        for (let item of sectionData.items) {
             const itemHtml = `
                 <li>
                     <h3>${item.name}</h3>
@@ -161,13 +162,16 @@ function createMenuCard(menuData) {
                     <p class="description">${item.description}</p>
                 </li>
             `
+            console.log(itemHtml);
+            const itemElement = parseHtml(itemHtml);
+            console.log(itemElement);
             list.appendChild(parseHtml(itemHtml));
         }
 
         section.appendChild(list);
-
-        return menuCard;
+        menuCard.appendChild(section);
     }
+    return menuCard;
 }
 
 
@@ -177,7 +181,7 @@ function menu(){
 
     const imgMain = new Image();
     imgMain.src = ImgTables;
-    imgMain.classList.add(".background");
+    imgMain.classList.add("background");
     content.appendChild(imgMain);
 
     content.appendChild(createMenuCard(menuData));
