@@ -1,5 +1,5 @@
 import home from "./home.js"
-import about from "./about.js"
+import contact from "./contact.js"
 import menu from "./menu.js"
 
 
@@ -17,8 +17,8 @@ document.querySelectorAll("nav>button").forEach(
                     case "menu":
                         menu();
                         break;
-                    case "about":
-                        about();
+                    case "contact":
+                        contact();
                         break;
                 }
                 document.querySelector("nav>.selected")

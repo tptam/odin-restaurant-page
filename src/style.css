@@ -6,6 +6,8 @@
     --main-content-width: min(80%, 700px);
     --menu-photo-width: 150px;
 
+    --base-font-size: 1.2rem;
+
     --tab-number: 3;
 
     --primary-color: #617d4f;    
@@ -36,6 +38,7 @@ body {
     width: 100vw;
     height: 100vh;
     grid-template-rows: var(--header-height) auto;
+    font-size: var(--base-font-size);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -126,7 +129,7 @@ nav>button:hover {
     margin: auto;
     margin-top: 15vh;
     margin-bottom: 15vh;
-    padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3);
+    padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3) calc(var(--gutter) * 3);
 }
 
 #menu-card section:not(:first-of-type){
@@ -186,6 +189,51 @@ nav>button:hover {
     color: var(--text-color-light);
 }
 
+/* Contact */
+#content[data-tab="contact"] img.background {
+    position: absolute;
+    height: var(--narrow-hero-height);
+    width: 100%;
+    object-fit: cover;
+}
+
+#contact-card {
+    width: var(--main-content-width);
+    background-color: var(--surface-color);
+    border-radius: 2rem;
+    opacity: 70%;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3) calc(var(--gutter) * 3);
+}
+
+#contact-card h1 {
+    margin-bottom: calc(var(--gutter) * 3);
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+#contact-card h2 {
+    margin: var(--gutter) 0;
+    font-size: 2rem;
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+#contact-card h3 {
+    font-size: 1.4rem;
+}
+
+#contact-card section:not(:first-of-type){
+    margin-top: calc(var(--gutter) * 4);
+}
+
+#contact-card h3:not(:first-of-type){
+    margin-top: calc(var(--gutter) * 2);
+}
+
+
+/* For smaller screens */
 @media screen and (max-width: 700px) {
     #menu-card h2 {
         text-align: center;
