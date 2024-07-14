@@ -1,22 +1,32 @@
 :root {
-    --background-color: #dae2d5;
     --gutter: 16px;
     --header-height: 50px;
     --narrow-hero-height: 30vh;
 
+    --main-content-width: min(80%, 700px);
+
     --tab-number: 3;
 
+    
     --primary-color-light: #bad4aa;
     --secondary-color-light: #aaacd4;
+    --background-color: #dae2d5;
+    --surface-color: white;
     --light-blue: #b6cfd4;
 
 }
 
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+ul {
+    list-style: none;
+}
+
 
 body {
     display: grid;
@@ -71,7 +81,7 @@ nav>button:hover {
 #home-text {
     position: absolute;
     bottom: 18%;
-    background: white;
+    background: var(--surface-color);
     opacity: 70%;
     backdrop-filter: blur(10px);
     width: 100%;
@@ -82,7 +92,7 @@ nav>button:hover {
 }
 
 #home-text > * {
-    width: min(70%, 700px);
+    width: var(--main-content-width);
 }
 
 /* Calculated on https://min-max-calculator.9elements.com/ */
@@ -98,7 +108,17 @@ nav>button:hover {
 /* Menu */
 
 #content[data-tab="menu"] img.background {
+    position: absolute;
     height: var(--narrow-hero-height);
     width: 100%;
     object-fit: cover;
+}
+
+#menu-card {
+    width: var(--main-content-width);
+    background-color: var(--surface-color);
+    border-radius: 2rem;
+    opacity: 70%;
+    margin: auto;
+    margin-top: 15vh;
 }
