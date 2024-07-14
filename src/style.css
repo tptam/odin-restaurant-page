@@ -292,4 +292,11 @@ table#opening-hours {
     #opening-hours td {
         padding: calc(var(--gutter)/2) calc(var(--gutter) * 1);
     }
+
+    #opening-hours th {
+        padding-left: 0;
+    }
+    #opening-hours td {
+        padding-right: 0;
+    }
 }
