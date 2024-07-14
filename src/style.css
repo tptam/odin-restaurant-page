@@ -2,6 +2,7 @@
     --background-color: #dae2d5;
     --gutter: 16px;
     --header-height: 50px;
+    --narrow-hero-height: 300px;
 
     --tab-number: 3;
 
@@ -59,12 +60,13 @@ nav>button:hover {
     background-color: var(--background-color);
 }
 
-#content img.background {
+
+/* Home  */
+#content[data-tab="home"] img.background {
     height: calc(100vh - var(--header-height));
     width: 100%;
     object-fit: cover;
 }
-
 
 #home-text {
     position: absolute;
@@ -83,7 +85,6 @@ nav>button:hover {
     width: min(70%, 700px);
 }
 
-
 /* Calculated on https://min-max-calculator.9elements.com/ */
 #home-text > h1 {
     font-size: clamp(2rem, 1.455rem + 2.73vw, 3.5rem);
@@ -91,4 +92,13 @@ nav>button:hover {
 
 #home-text > p {
     font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+}
+
+
+/* Menu */
+
+#content[data-tab="menu"] img.background {
+    height: var(--narrow-hero-height);
+    width: 100%;
+    object-fit: cover;
 }
