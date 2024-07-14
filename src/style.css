@@ -58,7 +58,7 @@ nav>button:hover {
     background-color: var(--background-color);
 }
 
-#content img {
+#content img.background {
     height: calc(100vh - var(--header-height));
     width: 100%;
     object-fit: cover;

@@ -1,11 +1,14 @@
+import parseHtml from "./parseHtml.js"
 import ImgTables from './images/tables.jpg';
 import './style.css';
 
 function home(){
     const content = document.querySelector("#content");
+    content.setAttribute("data-tab", "home");
 
     const imgMain = new Image();
     imgMain.src = ImgTables;
+    imgMain.classList.add(".background");
     content.appendChild(imgMain);
 
     const homeTextHtml = `
@@ -20,12 +23,6 @@ function home(){
     const homeText = parseHtml(homeTextHtml);
     content.appendChild(imgMain);
     content.appendChild(homeText);
-}
-
-function parseHtml(htmlText) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlText, 'text/html');
-    return doc.body.firstElementChild;
 }
 
 export default home;
