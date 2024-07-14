@@ -8,11 +8,11 @@ function contact(){
 
     const imgMain = new Image();
     imgMain.src = ImgOpen;
-    imgMain.classList.add("background");
+    imgMain.classList.add("top");
     content.appendChild(imgMain);
 
     const contactCardHtml = `        
-        <div id="contact-card">
+        <div id="contact-card" class="main-card">
             <h1>Contact Us</h1>
             <section>
                 <h2>Opening Hours</h2>

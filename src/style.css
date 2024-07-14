@@ -90,6 +90,46 @@ nav>button:hover {
     background-color: var(--background-color);
 }
 
+/* top image (used in menu, contact) */
+#content img.top {
+    position: absolute;
+    height: var(--narrow-hero-height);
+    width: 100%;
+    object-fit: cover;
+}
+
+/* main card (used in menu, contact) */
+.main-card {
+    width: var(--main-content-width);
+    background-color: var(--surface-color);
+    border-radius: 2rem;
+    opacity: 70%;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3) calc(var(--gutter) * 3);
+}
+
+.main-card section:not(:first-of-type){
+    margin-top: calc(var(--gutter) * 4);
+}
+
+.main-card h1 {
+    margin-bottom: calc(var(--gutter) * 3);
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+.main-card h2 {
+    margin: var(--gutter) 0;
+    font-size: 2rem;
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+.main-card h3 {
+    font-size: 1.4rem;
+}
+
 
 /* Home  */
 #content[data-tab="home"] img.background {
@@ -126,44 +166,6 @@ nav>button:hover {
 
 
 /* Menu */
-
-#content[data-tab="menu"] img.background {
-    position: absolute;
-    height: var(--narrow-hero-height);
-    width: 100%;
-    object-fit: cover;
-}
-
-#menu-card {
-    width: var(--main-content-width);
-    background-color: var(--surface-color);
-    border-radius: 2rem;
-    opacity: 70%;
-    margin: auto;
-    margin-top: 15vh;
-    margin-bottom: 15vh;
-    padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3) calc(var(--gutter) * 3);
-}
-
-#menu-card section:not(:first-of-type){
-    margin-top: calc(var(--gutter) * 4);
-}
-
-#menu-card h1 {
-    margin-bottom: calc(var(--gutter) * 3);
-    font-size: 2.7rem;
-    text-align: center;
-}
-
-#menu-card h2 {
-    margin: var(--gutter) 0;
-    font-size: 2rem;
-    border-bottom: 1px solid var(--text-color-light);
-}
-
-#menu-card h3 {
-    font-size: 1.4rem;
-}
 
 #menu-card ul {
     display: grid;
@@ -203,47 +205,6 @@ nav>button:hover {
 }
 
 /* Contact */
-#content[data-tab="contact"] img.background {
-    position: absolute;
-    height: var(--narrow-hero-height);
-    width: 100%;
-    object-fit: cover;
-}
-
-#contact-card {
-    width: var(--main-content-width);
-    background-color: var(--surface-color);
-    border-radius: 2rem;
-    opacity: 70%;
-    margin: auto;
-    margin-top: 15vh;
-    margin-bottom: 15vh;
-    padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3) calc(var(--gutter) * 3);
-}
-
-#contact-card h1 {
-    margin-bottom: calc(var(--gutter) * 3);
-    font-size: 2.7rem;
-    text-align: center;
-}
-
-#contact-card h2 {
-    margin: var(--gutter) 0;
-    font-size: 2rem;
-    border-bottom: 1px solid var(--text-color-light);
-}
-
-#contact-card h3 {
-    font-size: 1.4rem;
-}
-
-#contact-card section:not(:first-of-type){
-    margin-top: calc(var(--gutter) * 4);
-}
-
-#contact-card h3:not(:first-of-type){
-    margin-top: calc(var(--gutter) * 2);
-}
 
 table#opening-hours {
     margin: var(--gutter);
@@ -271,7 +232,7 @@ table#opening-hours {
 
 /* For smaller screens */
 @media screen and (max-width: 700px) {
-    #menu-card h2 {
+    .main-card h2 {
         text-align: center;
     }
     #menu-card li {
@@ -292,7 +253,7 @@ table#opening-hours {
 }
 
 @media screen and (max-width: 450px) {
-    #menu-card {
+    .main-card {
         width: 90%;
         padding-right: calc(var(--gutter)*2);
         padding-left: calc(var(--gutter)*2);
@@ -313,12 +274,6 @@ table#opening-hours {
         border: none;
         border-radius: 1rem;
         background-color: var(--primary-color-light);
-    }
-
-    #contact-card {
-        width: 90%;
-        padding-right: calc(var(--gutter)*2);
-        padding-left: calc(var(--gutter)*2);
     }
 
     #opening-hour {

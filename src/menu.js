@@ -157,6 +157,7 @@ const menuData = [
 function createMenuCard(menuData) {
     const menuCard = document.createElement("div");
     menuCard.id = "menu-card";
+    menuCard.classList.add("main-card");
     const title = document.createElement("h1");
     title.textContent = "Menu"
     menuCard.appendChild(title);
@@ -196,7 +197,7 @@ function menu(){
 
     const imgMain = new Image();
     imgMain.src = ImgTables;
-    imgMain.classList.add("background");
+    imgMain.classList.add("top");
     content.appendChild(imgMain);
 
     content.appendChild(createMenuCard(menuData));
