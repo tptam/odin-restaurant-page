@@ -56,7 +56,11 @@ function contact(){
                 <h3>Phone</h3>
                 <p>1-720-499-8760</p>
                 <h3>Email</h3>
-                <p>customer@tamsdiner.com</p>
+                <p>
+                    <a href="mailto:customer@tamsdiner.com">
+                        customer@tamsdiner.com
+                    </a>
+                </p>
             </section>
         </div>
     `;

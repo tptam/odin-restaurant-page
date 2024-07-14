@@ -6,14 +6,16 @@
     --main-content-width: min(80%, 700px);
     --menu-photo-width: 150px;
 
-    --base-font-size: 1.2rem;
+    --base-font-size: 1.3rem;
 
     --tab-number: 3;
 
     --primary-color: #617d4f;    
     --primary-color-light: #bad4aa;
+    --secondary-color: #3c3f77;
     --secondary-color-light: #aaacd4;
     --secondary-color-xlight:#e7e8f3;
+    --text-color-dark: #0c0e0b;
     --text-color-light: #32382e;
     --background-color: #dae2d5;
     --surface-color: white;
@@ -32,6 +34,15 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+h1, h2, h3 {
+    color: var(--text-color-dark);
+}
+
 /* Major sections */
 
 body {
@@ -40,6 +51,7 @@ body {
     height: 100vh;
     grid-template-rows: var(--header-height) auto;
     font-size: var(--base-font-size);
+    color: var(--text-color-light);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -186,7 +198,7 @@ nav>button:hover {
 #menu-card li .description {
     grid-area: description;
     align-self: start;
-    font-size: 1.2rem;
+    font-size: var(--base-font-size);
     color: var(--text-color-light);
 }
 
@@ -252,6 +264,7 @@ table#opening-hours {
 }
 
 #opening-hours th {
+    color: var(--text-color-dark);
     border-right: 1px solid var(--primary-color);
     text-align: left;
 }
@@ -311,7 +324,7 @@ table#opening-hours {
     #opening-hour {
         margin: 0;
     }
-    
+
     #opening-hours th,
     #opening-hours td {
         padding: calc(var(--gutter)/2) calc(var(--gutter) * 1);
