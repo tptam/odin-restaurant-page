@@ -211,7 +211,6 @@ nav>button:hover {
 /* Contact */
 
 table#opening-hours {
-    margin: var(--gutter);
     font-size: 1.4rem;
     border-collapse: collapse;
 }
@@ -219,7 +218,7 @@ table#opening-hours {
 .table-wrapper {
     width: fit-content;
     margin: calc(var(--gutter)*2) auto;
-    padding: var(--gutter);
+    padding: calc(var(--gutter)*2);
     border: 5px double var(--primary-color);
 }
 
@@ -280,8 +279,13 @@ table#opening-hours {
         background-color: var(--primary-color-light);
     }
 
-    #opening-hour {
+    table#opening-hours {
         margin: 0;
+    }
+
+    .table-wrapper {
+        margin: calc(var(--gutter)*2) auto;
+        padding: calc(var(--gutter)*1);
     }
 
     #opening-hours th,
