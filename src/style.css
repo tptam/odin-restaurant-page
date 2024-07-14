@@ -43,6 +43,10 @@ h1, h2, h3 {
     color: var(--text-color-dark);
 }
 
+button {
+    color: var(--text-color-dark);
+}
+
 /* Major sections */
 
 body {
