@@ -2,6 +2,16 @@ import parseHtml from "./parseHtml.js"
 import ImgTables from './images/herbs.jpg';
 import './style.css';
 
+// Import all images for menu items
+function importAll(r) {
+    let images = {};
+    r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
+
+const images = importAll(require.context('./images/menu', false, /\.(png|jpe?g|svg)$/));
+
+
 const menuData = [
     {
         "category": "Salads",
@@ -143,6 +153,7 @@ const menuData = [
     }
 ];
 
+
 function createMenuCard(menuData) {
     const menuCard = document.createElement("div");
     menuCard.id = "menu-card";
@@ -157,6 +168,7 @@ function createMenuCard(menuData) {
         for (let item of sectionData.items) {
             const itemHtml = `
                 <li>
+                    <img src=${images[item.src]} alt="${item.name}">
                     <h3>${item.name}</h3>
                     <p class="price">${item.price}</p>
                     <p class="description">${item.description}</p>
