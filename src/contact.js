@@ -8,6 +8,7 @@ function contact(){
 
     const imgMain = new Image();
     imgMain.src = ImgOpen;
+    imgMain.alt = "Leaves, a map, and a vintage camera on the wood floor";
     imgMain.classList.add("top");
     content.appendChild(imgMain);
 

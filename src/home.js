@@ -8,6 +8,7 @@ function home(){
 
     const imgMain = new Image();
     imgMain.src = ImgTables;
+    imgMain.alt = "Restaurant interior with tables, chairs, and plants";
     imgMain.classList.add("background");
     content.appendChild(imgMain);
 

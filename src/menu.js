@@ -197,6 +197,7 @@ function menu(){
 
     const imgMain = new Image();
     imgMain.src = ImgTables;
+    imgMain.alt = "A small cup of olive oil, herbs, and garlic cloves on a plate";
     imgMain.classList.add("top");
     content.appendChild(imgMain);
 
