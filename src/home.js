@@ -12,7 +12,6 @@ function home(){
     content.appendChild(imgMain);
 
     const homeTextHtml = `
-
             <div id="home-text">
                 <h1>Welcome to Tam's! </h1>
                 <p>
