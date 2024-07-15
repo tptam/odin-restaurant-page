@@ -261,6 +261,10 @@ table#opening-hours {
     text-align: left;
 }
 
+#contact-card h3:not(:first-of-type) {
+    margin-top: var(--gutter);
+}
+
 /* For smaller screens */
 @media screen and (max-width: 700px) {
     .main-card h2 {
