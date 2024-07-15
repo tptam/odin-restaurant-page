@@ -1,4 +1,5 @@
 import parseHtml from './parseHtml';
+import updateFooterAssets from "./update-footer-assets.js";
 import './style.css';
 import ImgOpen from './images/map.jpg';
 
@@ -69,6 +70,10 @@ function contact(){
 
     content.appendChild(contactCard);
 
+    const assetTexts = [
+        'Photo by <a href="https://unsplash.com/@joannakosinska?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Joanna Kosinska</a> on <a href="https://unsplash.com/photos/flat-lay-photography-of-spices-on-plate-i0IvwAhhGZM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+    ];
+    updateFooterAssets(assetTexts);
 }
 
 export default contact;

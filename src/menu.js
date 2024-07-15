@@ -1,4 +1,5 @@
 import parseHtml from "./parseHtml.js"
+import updateFooterAssets from "./update-footer-assets.js";
 import ImgTables from './images/herbs.jpg';
 import './style.css';
 
@@ -200,6 +201,11 @@ function menu(){
     content.appendChild(imgMain);
 
     content.appendChild(createMenuCard(menuData));
+
+    const assetTexts = [
+        'Photo by <a href="https://unsplash.com/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> on <a href="https://unsplash.com/photos/black-and-silver-tlr-camera-on-isle-of-wight-map-X_NiqkkzVgM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+    ];
+    updateFooterAssets(assetTexts);
 }
 
 export default menu;
