@@ -1,5 +1,6 @@
 import parseHtml from "./tools/parse-html.js"
-import updateFooterAssets from "./update-footer-assets.js";
+import updateFooterAssets from "./tools/update-footer-assets.js";
+import menuJson from "./json/menu-items.json";
 import ImgTables from './images/herbs.jpg';
 import './style.css';
 
@@ -191,6 +192,10 @@ function createMenuCard(menuData) {
 
 
 function menu(){
+
+    console.table(menuJson);
+    console.log("json");
+
     const content = document.querySelector("#content");
     content.setAttribute("data-tab", "menu");
 

@@ -1,4 +1,4 @@
-import parseHtml from "./tools/parse-html";
+import parseHtml from "./parse-html.js";
 
 function updateFooterAssets(assetTexts) {
     const assets = document.querySelector("footer .assets");

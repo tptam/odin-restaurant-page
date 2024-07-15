@@ -1,5 +1,5 @@
 import parseHtml from './tools/parse-html.js';
-import updateFooterAssets from "./update-footer-assets.js";
+import updateFooterAssets from "./tools/update-footer-assets.js";
 import './style.css';
 import ImgOpen from './images/map.jpg';
 
