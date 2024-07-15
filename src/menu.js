@@ -1,5 +1,6 @@
 import parseHtml from "./tools/parse-html.js"
 import updateFooterAssets from "./tools/update-footer-assets.js";
+import assetsData from "./json/assets.json";
 import  menuItemsData from "./json/menu-items.json";
 import ImgTables from './images/herbs.jpg';
 import './style.css';
@@ -61,9 +62,9 @@ function menu(){
 
     content.appendChild(createMenuCard());
 
-    const assetTexts = [
-        'Photo by <a href="https://unsplash.com/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> on <a href="https://unsplash.com/photos/black-and-silver-tlr-camera-on-isle-of-wight-map-X_NiqkkzVgM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
-    ];
+    const assetTexts = assetsData
+        .filter(asset => asset.content === "menu")
+        .map(asset => asset.text);
     updateFooterAssets(assetTexts);
 }
 
