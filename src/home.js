@@ -1,5 +1,6 @@
 import parseHtml from "./tools/parse-html.js"
 import updateFooterAssets from "./tools/update-footer-assets.js";
+import assetsData from "./json/assets.json";
 import ImgTables from './images/tables.jpg';
 import './style.css';
 
@@ -25,10 +26,11 @@ function home(){
     content.appendChild(imgMain);
     content.appendChild(homeText);
 
-    const assetTexts = [
-        'Photo by <a href="https://unsplash.com/@ferhadd?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Farhad Ibrahimzade</a> on <a href="https://unsplash.com/photos/a-room-filled-with-lots-of-green-plants-K8OPYyAEtvI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
-    ];
+    const assetTexts = assetsData
+        .filter(asset => asset.content === "home")
+        .map(asset => asset.text);
     updateFooterAssets(assetTexts);
+
 }
 
 export default home;
