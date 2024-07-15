@@ -14,13 +14,11 @@
     --primary-color: #617d4f;    
     --primary-color-light: #bad4aa;
     --secondary-color: #3c3f77;
-    --secondary-color-light: #aaacd4;
-    --secondary-color-xlight:#e7e8f3;
+    --secondary-color-light: #bbbddd;
     --text-color-dark: #0c0e0b;
     --text-color-light: #32382e;
     --background-color: #dae2d5;
     --surface-color: white;
-    --light-blue: #b6cfd4;
 
 }
 
@@ -106,6 +104,10 @@ footer {
     padding: 0.5rem;
     background-color:#617d4f;
     color: var(--background-color);
+}
+
+footer a {
+    color: var(--secondary-color-light);
 }
 
 
