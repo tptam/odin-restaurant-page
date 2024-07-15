@@ -7,6 +7,7 @@
     --menu-photo-width: 150px;
 
     --base-font-size: 1.3rem;
+    --title-font-size: 2.7rem;
 
     --tab-number: 3;
 
@@ -117,7 +118,10 @@ footer {
     margin: auto;
     margin-top: calc(var(--narrow-hero-height)/2);
     margin-bottom: calc(var(--narrow-hero-height)/2);
-    padding: calc(var(--gutter) * 2) calc(var(--gutter) * 3) calc(var(--gutter) * 3);
+    padding: calc(var(--gutter) * 3);
+
+    /* For positionig title to be center of the overlapping part  */
+    padding-top: calc(((var(--narrow-hero-height) / 2) - var(--title-font-size))/2);
 }
 
 .main-card section:not(:first-of-type){
@@ -126,7 +130,7 @@ footer {
 
 .main-card h1 {
     margin-bottom: calc(var(--gutter) * 3);
-    font-size: 2.7rem;
+    font-size: var(--title-font-size);
     text-align: center;
 }
 
