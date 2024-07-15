@@ -8,6 +8,7 @@ function updateFooterAssets(){
         ];
     
     const assets = document.querySelector("footer .assets");
+    assets.textContent = "";
     for (let text of assetTexts) {
         const assetHtml = `
             <span class="asset-item">${text}</span>
