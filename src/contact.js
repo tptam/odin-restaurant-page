@@ -1,4 +1,4 @@
-import parseHtml from './parseHtml';
+import parseHtml from './parse-html.js';
 import updateFooterAssets from "./update-footer-assets.js";
 import './style.css';
 import ImgOpen from './images/map.jpg';
