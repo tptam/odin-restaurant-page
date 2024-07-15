@@ -55,7 +55,7 @@ body {
     display: grid;
     width: 100%;
     min-height: 100vh;
-    grid-template-rows: var(--header-height) auto;
+    grid-template-rows: var(--header-height) auto auto;
     font-size: var(--base-font-size);
     color: var(--text-color-light);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -97,10 +97,17 @@ nav>button:hover {
 }
 
 footer {
-    position: absolute;
+    width: 100%;
     bottom: 0;
     font-size: 1rem;
+    display: flex;
+    gap: var(--gutter);
+    justify-content: center;
+    padding: 0.5rem;
+    background-color:#617d4f;
+    color: var(--background-color);
 }
+
 
 /* top image (used in menu, contact) */
 #content img.top {
