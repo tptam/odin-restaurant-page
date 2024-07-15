@@ -1,4 +1,4 @@
-import parseHtml from "./parse-html.js"
+import parseHtml from "./tools/parse-html.js"
 import updateFooterAssets from "./update-footer-assets.js";
 import ImgTables from './images/tables.jpg';
 import './style.css';
