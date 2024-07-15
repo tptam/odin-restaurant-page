@@ -121,7 +121,9 @@ footer {
     padding: calc(var(--gutter) * 3);
 
     /* For positionig title to be center of the overlapping part  */
-    padding-top: calc(((var(--narrow-hero-height) / 2) - var(--title-font-size))/2);
+    padding-top: calc(
+            ((var(--narrow-hero-height) / 2) - var(--title-font-size)) / 2
+    );
 }
 
 .main-card section:not(:first-of-type){
